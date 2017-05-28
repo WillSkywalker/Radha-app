@@ -1,6 +1,6 @@
-# RadhaApp
+# Will Skywalker's Project Radha
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.5. It's the frontend webapp of [Will Skywalker's Project Radha](https://github.com/WillSkywalker/Radha)
 
 ## Development server
 

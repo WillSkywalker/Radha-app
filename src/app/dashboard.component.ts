@@ -14,7 +14,7 @@ import { ArticleService } from './art.service';
 export class DashboardComponent implements OnInit {
   selected_article: Article;
   hot_articles: ArticlePre[];
-  recent_articles: Article[];
+  recent_articles: ArticlePre[];
   random_articles: Article[];
   recommendations: Article[];
 

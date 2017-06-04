@@ -51,7 +51,9 @@ export class ArticleService {
   }
 
   getRecentArticles(): Promise<Article[]> {
-    return Promise.resolve(ARTICLES.slice(-3).reverse());
+    return this.http.get(this.ApiUrl+'article/'+id.toString()).toPromise()
+        .then(res => res.json() as Article)
+        .catch(this.handleError);
   }
 
   getHottestArticles(): Promise<Article[]> {

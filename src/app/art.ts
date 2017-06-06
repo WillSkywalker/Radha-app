@@ -14,6 +14,7 @@ export class ArticlePre {
   id: number;
   title: string;
   chinese_title: string;
+  content: string;
   category: string;
   tags: string[];
   viewcount: number;

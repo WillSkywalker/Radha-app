@@ -2,6 +2,8 @@ import { Component, Input, OnInit, Injectable } from '@angular/core'; // Remove 
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import { Http, Headers, Jsonp } from '@angular/http';
+import { Observable }     from 'rxjs/Observable';
+
 
 import { Article, ArticlePre } from './art';
 
@@ -23,7 +25,7 @@ export class ArtDetailComponent implements OnInit {
   // private lookUpApiUrl ='https://api.shanbay.com/bdc/search/?word=';
   // private lookUpApiUrl ='http://localhost:5000/api/word/';
   private lookUpApiUrl ='https://willskywalker.com/api/word/';
-  explain: string;
+  explain: Observable<string>;
 
   @Input()
   art: Article;
@@ -45,9 +47,9 @@ export class ArtDetailComponent implements OnInit {
   }
 
   showPopup(word:string) {
-    this.http.get(this.lookUpApiUrl+word).toPromise()
+    this.explain = this.http.get(this.lookUpApiUrl+word)
         // .then(res => document.getElementsByClassName('popover-content')[0].innerHTML += res.json().data.definition)
-        .then(res => this.explain = res.text())
+        .map(res => res.text())
         .catch(this.handleError);
 
     // document.getElementsByClassName('popover-content')[0].innerHTML+=this.explain;

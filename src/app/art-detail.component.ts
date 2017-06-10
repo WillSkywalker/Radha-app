@@ -27,6 +27,8 @@ export class ArtDetailComponent implements OnInit {
 
   @Input()
   art: Article;
+  show:{} = {};
+  editing = {};
 
   constructor(
     private art_service: ArticleService,

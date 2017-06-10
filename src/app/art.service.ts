@@ -65,7 +65,9 @@ export class ArticleService {
   }
 
   getCertainArticles(category: string): Promise<ArticlePre[]> {
-    return Promise.resolve(ARTICLES.filter(art => art.category === category).slice(-3).reverse());
+    return this.http.get(this.ApiUrl+'category/'+category).toPromise()
+        .then(res => res.json() as ArticlePre[])
+        .catch(this.handleError);
   }
 
 

@@ -1,5 +1,7 @@
 import { NgModule }      from '@angular/core';
-import { MaterialModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdChipsModule, 
+  MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
+  MdListModule, MdGridListModule, MdTableModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
@@ -26,7 +28,16 @@ import 'hammerjs';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    MaterialModule,
+    MdButtonModule,
+    MdCheckboxModule,
+    MdChipsModule,
+    MdCardModule,
+    MdMenuModule,
+    MdToolbarModule,
+    MdIconModule,
+    MdListModule,
+    MdGridListModule,
+    MdTableModule,
     HttpModule,
     JsonpModule,
     BrowserAnimationsModule,

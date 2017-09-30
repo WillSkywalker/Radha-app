@@ -8,6 +8,8 @@ import { Observable }     from 'rxjs/Observable';
 import { Article, ArticlePre } from './art';
 
 import { ArticleService } from './art.service';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/toPromise';
 
